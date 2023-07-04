@@ -1,0 +1,25 @@
+Name                               Id                                 Version                      Available    Source
+-----------------------------------------------------------------------------------------------------------------------
+Visual Studio Community 2022       Microsoft.VisualStudio.2022.Commu… 17.5.4                       17.6.4       winget
+Notepad++ (64-bit x64)             Notepad++.Notepad++                8.5                          8.5.4        winget
+Wireshark 4.0.4 64-bit             WiresharkFoundation.Wireshark      4.0.4                        4.0.6.0      winget
+Microsoft Visual C++ 2013 Redistr… Microsoft.VCRedist.2013.x64        12.0.30501.0                 12.0.40664.0 winget
+Microsoft ASP.NET Core 6.0.18 - S… Microsoft.DotNet.AspNetCore.6      6.0.18                       6.0.19       winget
+Oracle VM VirtualBox 7.0.6         Oracle.VirtualBox                  7.0.6                        7.0.8        winget
+Microsoft Windows Desktop Runtime… Microsoft.DotNet.DesktopRuntime.6  6.0.18                       6.0.19       winget
+LibreOffice 7.5.2.2                TheDocumentFoundation.LibreOffice  7.5.2.2                      7.5.4.2      winget
+GNU Midnight Commander version 4.… GNU.MidnightCommander              4.8.28 (build: 20220618-227) 4.8.28       winget
+PuTTY release 0.77 (64-bit)        PuTTY.PuTTY                        0.77.0.0                     0.78.0.0     winget
+Microsoft Windows Desktop Runtime… Microsoft.DotNet.DesktopRuntime.6  6.0.18                       6.0.19       winget
+Microsoft .NET SDK 6.0.410 (x64)   Microsoft.DotNet.SDK.6             6.0.410                      6.0.411      winget
+Microsoft .NET SDK 6.0.313 (x64)   Microsoft.DotNet.SDK.6             6.0.313                      6.0.411      winget
+Microsoft ASP.NET Core 6.0.18 - S… Microsoft.DotNet.AspNetCore.6      6.0.18                       6.0.19       winget
+PowerShell 7.3.2.0-x64             Microsoft.PowerShell               7.3.2.0                      7.3.5.0      winget
+Microsoft Visual C++ 2013 Redistr… Microsoft.VCRedist.2013.x86        12.0.30501.0                 12.0.40664.0 winget
+23 upgrades available.
+
+The following packages have an upgrade available, but require explicit targeting for upgrade:
+Name        Id          Version  Available Source
+-------------------------------------------------
+MSYS2 64bit MSYS2.MSYS2 20220118 20230526  winget
+2 package(s) have version numbers that cannot be determined. Use --include-unknown to see all results.
