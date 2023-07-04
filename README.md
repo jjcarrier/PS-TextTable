@@ -1,5 +1,7 @@
 # TextTable Converter PowerShell Module
 
+[![CI](https://github.com/jjcarrier/TextTable/actions/workflows/ci.yml/badge.svg)](https://github.com/jjcarrier/TextTable/actions/workflows/ci.yml)
+
 ## Description
 
 Provides a simple way to convert text-based tables into PowerShell objects.
