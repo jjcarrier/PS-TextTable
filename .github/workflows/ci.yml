@@ -32,7 +32,7 @@ jobs:
       - name: Lint with PSScriptAnalyzer
         shell: pwsh
         run: |
-          Invoke-ScriptAnalyzer -Path TextTable.psm1 -Recurse -Outvariable issues
+          Invoke-ScriptAnalyzer -Path TextTable/TextTable.psm1 -Recurse -Outvariable issues
           $errors   = $issues.Where({$_.Severity -eq 'Error'})
           $warnings = $issues.Where({$_.Severity -eq 'Warning'})
           if ($errors) {
