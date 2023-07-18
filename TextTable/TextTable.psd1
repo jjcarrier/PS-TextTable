@@ -1,6 +1,6 @@
 @{
     RootModule = 'TextTable.psm1'
-    ModuleVersion = '1.0'
+    ModuleVersion = '1.0.1'
     GUID = '16a5ab4c-4d8c-42d6-8f72-227aea552a84'
     Author = 'Jon Carrier'
     CompanyName = 'Unknown'
@@ -15,21 +15,23 @@
     # FormatsToProcess = @()
     # NestedModules = @()
 
-    FunctionsToExport = @()
-    CmdletsToExport = @(
-        "Get-TextTableInfo",
-        "ConvertFrom-TextTable"
-    )
+    FunctionsToExport = @(
+        'Get-TextTableInfo',
+        'ConvertFrom-TextTable')
+    CmdletsToExport = @()
     VariablesToExport = '*'
     AliasesToExport = @()
 
     # ModuleList = @()
-    # FileList = @()
+    FileList = @(
+        'TextTable.psd1',
+        'TextTable.psm1'
+    )
 
     PrivateData = @{
 
         PSData = @{
-            Tags = @('Text', 'Table', 'Converter')
+            Tags = @('Windows', 'MacOS', 'Linux', 'Text', 'Table', 'Converter')
             LicenseUri = 'https://github.com/jjcarrier/PS-TextTable/blob/main/LICENSE'
             ProjectUri = 'https://github.com/jjcarrier/PS-TextTable'
             # IconUri = ''
