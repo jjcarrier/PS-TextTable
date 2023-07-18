@@ -1,7 +1,7 @@
 # Basic tests for supporting various table formats
 
 BeforeAll {
-  Import-Module "$PSScriptRoot\TextTable.psm1"
+  Import-Module "$PSScriptRoot\..\TextTable\TextTable.psm1"
 }
 
 Describe 'ConvertFrom-TextTable' {
