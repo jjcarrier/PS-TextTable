@@ -1,5 +1,6 @@
 # TextTable Converter PowerShell Module
 
+![PSGallery](https://img.shields.io/powershellgallery/p/TextTable)
 [![CI](https://github.com/jjcarrier/TextTable/actions/workflows/ci.yml/badge.svg)](https://github.com/jjcarrier/TextTable/actions/workflows/ci.yml)
 
 ## Description
