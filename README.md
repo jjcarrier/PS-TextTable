@@ -27,15 +27,17 @@ With the above requirements, it is possible to support a simple solution for par
 
 ## Installation
 
-Initialize the repository:
-
-Add the following to `$PROFILE` replacing `$PathToTextTablePsm1` with the path to the TextTable `.psm1` file:
+Install the module from `PSGallery`:
 
 ```pwsh
-Import-Module $PathToTextTablePsm1
+Install-Module -Name TextTable -Repository PSGallery
 ```
 
-Alternatively, this module may be installed in the [$PSModulePath](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.3)
+Load the module via:
+
+```pwsh
+Import-Module TextTable
+```
 
 ## Usage
 
