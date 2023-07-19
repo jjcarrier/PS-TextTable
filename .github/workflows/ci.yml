@@ -3,25 +3,24 @@ name: CI
 on:
   push:
     branches:
-      - 'develop'
       - 'main'
   pull_request:
     branches:
-      - 'develop'
       - 'main'
 
   # Allow manually triggering of the workflow.
   workflow_dispatch: {}
 
+env:
+  MODULE_NAME: TextTable
+
 jobs:
-  build_tests_xcore:
-    name: Build Test Apps
+  test:
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          submodules: recursive
 
       - name: Install PSScriptAnalyzer
         shell: pwsh
@@ -32,7 +31,7 @@ jobs:
       - name: Lint with PSScriptAnalyzer
         shell: pwsh
         run: |
-          Invoke-ScriptAnalyzer -Path TextTable/TextTable.psm1 -Recurse -Outvariable issues
+          Invoke-ScriptAnalyzer -Path "$env:MODULE_NAME/$env:MODULE_NAME.psm1" -Recurse -Outvariable issues
           $errors   = $issues.Where({$_.Severity -eq 'Error'})
           $warnings = $issues.Where({$_.Severity -eq 'Warning'})
           if ($errors) {
@@ -41,7 +40,15 @@ jobs:
               Write-Output "There were $($errors.Count) errors and $($warnings.Count) warnings total."
           }
 
-      - name: Test
+      - name: Test Manifest
+        shell: pwsh
+        run: |
+          Test-ModuleManifest "$env:MODULE_NAME/$env:MODULE_NAME.psd1" -Verbose
+          if (-not($?)) {
+              Write-Error "Manifest validation failed." -ErrorAction Stop
+          }
+
+      - name: Test Module
         shell: pwsh
         run: |
           Invoke-Pester
