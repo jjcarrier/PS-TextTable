@@ -23,7 +23,7 @@ Below are the `current` requirements for table conversion:
 
 With the above requirements, it is possible to support a simple solution for parsing table entries with spaces.
 
-> **Note**
+> [!NOTE]\
 > The primary use-case of this module was to provide a simple way to access the list of upgradable
   packages from the output of `winget update`.
 
