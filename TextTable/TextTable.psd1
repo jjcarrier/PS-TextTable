@@ -1,6 +1,6 @@
 @{
     RootModule = 'TextTable.psm1'
-    ModuleVersion = '1.0.1'
+    ModuleVersion = '1.0.2'
     GUID = '16a5ab4c-4d8c-42d6-8f72-227aea552a84'
     Author = 'Jon Carrier'
     CompanyName = 'Unknown'
