@@ -38,4 +38,10 @@ Describe 'ConvertFrom-TextTable' {
     $table.Count | Should -Be 4
     $table[0].Name | Should -Be "One"
   }
+
+  It "does not truncate the last column of text" {
+    $table = ConvertFrom-TextTable -Text (Get-Content "$PSScriptRoot/TextTests/winget.txt")
+    $testEntry = $table | Where-Object { $_.Id -eq "Microsoft.VCRedist.2013.x64" }
+    $testEntry.Available | Should -Be "12.0.40664.0"
+  }
 }
