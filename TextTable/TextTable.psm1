@@ -136,10 +136,14 @@ function ConvertFrom-TextTableItem
     $Entry = $ItemText.Replace($TruncationCharSequence, $TruncationChar)
     $item = New-Object PSObject
 
+    $columnCount = 0
     foreach ($columnInfo in $TableInfo.ColumnInfo)
     {
+        $columnCount++
         try {
             if ($columnInfo.StartIndex + $columnInfo.Width -gt $Entry.Length) {
+                $entryField = $Entry.Substring($columnInfo.StartIndex).Trim()
+            } elseif ($columnCount -ge $TableInfo.ColumnInfo.Count) {
                 $entryField = $Entry.Substring($columnInfo.StartIndex).Trim()
             } else {
                 $entryField = $Entry.Substring($columnInfo.StartIndex, $columnInfo.Width).Trim()
